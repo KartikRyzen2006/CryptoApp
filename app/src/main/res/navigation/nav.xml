@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cryptoapp.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment22"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.example.cryptoapp.fragment.MarketFragment"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_market" >
+        <action
+            android:id="@+id/action_marketFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.example.cryptoapp.fragment.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.example.cryptoapp.fragment.models.CryptoCurrency"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.example.cryptoapp.fragment.WatchListFragment"
+        android:label="WatchListFragment">
+        <action
+            android:id="@+id/action_watchListFragment2_to_detailsFragment2"
+            app:destination="@id/detailsFragment2" />
+    </fragment>
+</navigation>
